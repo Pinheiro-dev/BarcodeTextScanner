@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD1FB8AE2BBF869400E3A779 /* DataScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FB8AD2BBF869400E3A779 /* DataScannerView.swift */; };
 		DDEC23202BBF7BAF009B0BC5 /* BarcodeTextScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC231F2BBF7BAF009B0BC5 /* BarcodeTextScannerApp.swift */; };
 		DDEC23222BBF7BAF009B0BC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC23212BBF7BAF009B0BC5 /* ContentView.swift */; };
 		DDEC23242BBF7BB0009B0BC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDEC23232BBF7BB0009B0BC5 /* Assets.xcassets */; };
 		DDEC23282BBF7BB0009B0BC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDEC23272BBF7BB0009B0BC5 /* Preview Assets.xcassets */; };
+		DDEC232F2BBF7E23009B0BC5 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC232E2BBF7E23009B0BC5 /* AppViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD1FB8AD2BBF869400E3A779 /* DataScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerView.swift; sourceTree = "<group>"; };
 		DDEC231C2BBF7BAF009B0BC5 /* BarcodeTextScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcodeTextScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDEC231F2BBF7BAF009B0BC5 /* BarcodeTextScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeTextScannerApp.swift; sourceTree = "<group>"; };
 		DDEC23212BBF7BAF009B0BC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DDEC23232BBF7BB0009B0BC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDEC23252BBF7BB0009B0BC5 /* BarcodeTextScanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BarcodeTextScanner.entitlements; sourceTree = "<group>"; };
 		DDEC23272BBF7BB0009B0BC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DDEC232E2BBF7E23009B0BC5 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				DDEC231F2BBF7BAF009B0BC5 /* BarcodeTextScannerApp.swift */,
+				DDEC232E2BBF7E23009B0BC5 /* AppViewModel.swift */,
 				DDEC23212BBF7BAF009B0BC5 /* ContentView.swift */,
+				DD1FB8AD2BBF869400E3A779 /* DataScannerView.swift */,
 				DDEC23232BBF7BB0009B0BC5 /* Assets.xcassets */,
 				DDEC23252BBF7BB0009B0BC5 /* BarcodeTextScanner.entitlements */,
 				DDEC23262BBF7BB0009B0BC5 /* Preview Content */,
@@ -141,6 +147,8 @@
 			files = (
 				DDEC23222BBF7BAF009B0BC5 /* ContentView.swift in Sources */,
 				DDEC23202BBF7BAF009B0BC5 /* BarcodeTextScannerApp.swift in Sources */,
+				DDEC232F2BBF7E23009B0BC5 /* AppViewModel.swift in Sources */,
+				DD1FB8AE2BBF869400E3A779 /* DataScannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +282,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app needs camera access to scan barcode and text";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -284,15 +293,16 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pinheiro.BarcodeTextScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,6 +322,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app needs camera access to scan barcode and text";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -322,15 +333,16 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pinheiro.BarcodeTextScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
